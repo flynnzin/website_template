@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    protected $fillable = ['name', 'email', 'password'];
+}
+
+class Subscription extends Model
+{
+    protected $fillable = ['user_id', 'plan', 'status', 'start_date', 'end_date'];
+}
+
+class Product extends Model
+{
+    protected $fillable = ['name', 'description', 'price'];
+}
+
+class Order extends Model
+{
+    protected $fillable = ['user_id', 'product_id', 'quantity', 'total_price', 'status'];
+}
